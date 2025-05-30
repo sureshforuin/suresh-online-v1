@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import ParticlesBg from "particles-bg";
 import { Fade } from "react-awesome-reveal";
 
-class Header extends Component {
+interface HeaderProps {
+  data: any;
+}
+
+class Header extends Component<HeaderProps> {
   render() {
     if (!this.props.data) return null;
 
