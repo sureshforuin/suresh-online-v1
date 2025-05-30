@@ -10,18 +10,13 @@ import Contact from "./Components/Contact";
 import Portfolio from "./Components/Portfolio";
 
 interface AppsProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  data: {
-    resumeData: any;
-  };
+  data: any
 }
-
 
 class App extends Component<AppsProps, { resumeData: any }> {
   constructor(props: any) {
     super(props);
     this.state = {
-      foo: "bar",
       resumeData: {},
     };
 
@@ -33,10 +28,12 @@ class App extends Component<AppsProps, { resumeData: any }> {
       url: "./resumeData.json",
       dataType: "json",
       cache: false,
-      success: function (data: any) {
+      success: (data: any) => {
         this.setState({ resumeData: data });
-      }.bind(this),
+      },
       error: function (xhr, status, err) {
+        console.log(status);
+        console.log(xhr);
         console.log(err);
         alert(err);
       },
