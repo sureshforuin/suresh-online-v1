@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Component } from "react";
 import $ from "jquery";
 import "./App.css";
 import Header from "./Components/Header";
@@ -8,12 +9,20 @@ import Resume from "./Components/Resume";
 import Contact from "./Components/Contact";
 import Portfolio from "./Components/Portfolio";
 
-class App extends Component {
-  constructor(props) {
+interface AppsProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: {
+    resumeData: any;
+  };
+}
+
+
+class App extends Component<AppsProps, { resumeData: any }> {
+  constructor(props: any) {
     super(props);
     this.state = {
       foo: "bar",
-      resumeData: {}
+      resumeData: {},
     };
 
     // ReactGA.pageview(window.location.pathname);
@@ -24,13 +33,13 @@ class App extends Component {
       url: "./resumeData.json",
       dataType: "json",
       cache: false,
-      success: function(data) {
+      success: function (data: any) {
         this.setState({ resumeData: data });
       }.bind(this),
-      error: function(xhr, status, err) {
+      error: function (xhr, status, err) {
         console.log(err);
         alert(err);
-      }
+      },
     });
   }
 
@@ -41,12 +50,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header data={this.state.resumeData.main} />
-        <About data={this.state.resumeData.main} />
-        <Resume data={this.state.resumeData.resume} />
-        <Contact data={this.state.resumeData.main} />
-        <Portfolio data={this.state.resumeData.portfolio} />
-        <Footer data={this.state.resumeData.main} />
+        {this.state && this.state.resumeData && (
+          <>
+            <Header data={this.state.resumeData.main} />
+            <About data={this.state.resumeData.main} />
+            <Resume data={this.state.resumeData.resume} />
+            <Contact data={this.state.resumeData.main} />
+            <Portfolio data={this.state.resumeData.portfolio} />
+            <Footer data={this.state.resumeData.main} />
+          </>
+        )}
       </div>
     );
   }

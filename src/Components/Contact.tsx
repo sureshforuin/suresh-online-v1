@@ -1,8 +1,12 @@
-import React, { Component } from "react";
-import { Fade,Slide } from "react-awesome-reveal";
+import { Component } from "react";
+import { Fade, Slide } from "react-awesome-reveal";
 
+interface HeaderProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: any;
+}
 
-class Contact extends Component {
+class Contact extends Component<HeaderProps> {
   render() {
     if (!this.props.data) return null;
 
@@ -16,7 +20,7 @@ class Contact extends Component {
 
     return (
       <section id="contact">
-        <Fade bottom duration={1000}>
+        <Fade duration={1000}>
           <div className="row section-head">
             <div className="two columns header-col">
               <h1>
@@ -31,7 +35,7 @@ class Contact extends Component {
         </Fade>
 
         <div className="row">
-          <Slide left duration={1000}>
+          <Slide duration={1000}>
             <div className="eight columns">
               <form action="" method="post" id="contactForm" name="contactForm">
                 <fieldset>
@@ -42,10 +46,10 @@ class Contact extends Component {
                     <input
                       type="text"
                       defaultValue=""
-                      size="35"
+                      size={35}
                       id="contactName"
                       name="contactName"
-                      onChange={this.handleChange}
+                      // onChange={this.handleChange}
                     />
                   </div>
 
@@ -56,10 +60,10 @@ class Contact extends Component {
                     <input
                       type="text"
                       defaultValue=""
-                      size="35"
+                      size={35}
                       id="contactEmail"
                       name="contactEmail"
-                      onChange={this.handleChange}
+                      // onChange={this.handleChange}
                     />
                   </div>
 
@@ -68,10 +72,10 @@ class Contact extends Component {
                     <input
                       type="text"
                       defaultValue=""
-                      size="35"
+                      size={35}
                       id="contactSubject"
                       name="contactSubject"
-                      onChange={this.handleChange}
+                      // onChange={this.handleChange}
                     />
                   </div>
 
@@ -80,11 +84,10 @@ class Contact extends Component {
                       Message <span className="required">*</span>
                     </label>
                     <textarea
-                      cols="50"
-                      rows="15"
+                      cols={50}
+                      rows={15}
                       id="contactMessage"
-                      name="contactMessage"
-                    ></textarea>
+                      name="contactMessage"></textarea>
                   </div>
 
                   <div>
@@ -104,7 +107,7 @@ class Contact extends Component {
             </div>
           </Slide>
 
-          <Slide right duration={1000}>
+          <Slide duration={1000}>
             <aside className="four columns footer-widgets">
               <div className="widget widget_contact">
                 <h4>Address and Phone</h4>

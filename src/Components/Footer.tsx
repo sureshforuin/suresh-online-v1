@@ -1,11 +1,19 @@
-import React, { Component } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import  { Component } from "react";
 import { Fade } from "react-awesome-reveal";
 
-class Footer extends Component {
+
+interface PortfolioProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: any;
+}
+
+class Footer extends Component<PortfolioProps> {
+
   render() {
     if (!this.props.data) return null;
 
-    const networks = this.props.data.social.map(function (network) {
+    const networks = this.props.data.social.map( (network:any) =>{
       return (
         <li key={network.name}>
           <a href={network.url}>
@@ -18,7 +26,7 @@ class Footer extends Component {
     return (
       <footer>
         <div className="row">
-          <Fade bottom>
+          <Fade >
             <div className="twelve columns">
               <ul className="social-links">{networks}</ul>
 

@@ -1,9 +1,15 @@
-import React, { Component } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import  { Component } from "react";
 import { Slide } from "react-awesome-reveal";
 
-class Resume extends Component {
+interface ResumeProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: any;
+}
+
+class Resume extends Component<ResumeProps> {
   getRandomColor() {
-    let letters = "0123456789ABCDEF";
+    const letters = "0123456789ABCDEF";
     let color = "#";
     for (let i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
@@ -15,7 +21,7 @@ class Resume extends Component {
     if (!this.props.data) return null;
 
     const skillmessage = this.props.data.skillmessage;
-    const education = this.props.data.education.map(function (education) {
+    const education = this.props.data.education.map((education:any) => {
       return (
         <div key={education.school}>
           <h3>{education.school}</h3>
@@ -28,7 +34,7 @@ class Resume extends Component {
       );
     });
 
-    const work = this.props.data.work.map(function (work) {
+    const work = this.props.data.work.map( (work:any) => {
       return (
         <div key={work.company}>
           <h3>{work.company}</h3>
@@ -41,7 +47,7 @@ class Resume extends Component {
       );
     });
 
-    const skills = this.props.data.skills.map((skills) => {
+    const skills = this.props.data.skills.map((skills:any) => {
       const backgroundColor = this.getRandomColor();
       const className = "bar-expand " + skills.name.toLowerCase();
       const width = skills.level;
@@ -56,7 +62,7 @@ class Resume extends Component {
 
     return (
       <section id="resume">
-        <Slide left duration={1300}>
+        <Slide duration={1300}>
           <div className="row education">
             <div className="three columns header-col">
               <h1>
@@ -72,7 +78,7 @@ class Resume extends Component {
           </div>
         </Slide>
 
-        <Slide left duration={1300}>
+        <Slide duration={1300}>
           <div className="row work">
             <div className="three columns header-col">
               <h1>
@@ -84,7 +90,7 @@ class Resume extends Component {
           </div>
         </Slide>
 
-        <Slide left duration={1300}>
+        <Slide  duration={1300}>
           <div className="row skill">
             <div className="three columns header-col">
               <h1>

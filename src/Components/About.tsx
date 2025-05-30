@@ -1,7 +1,12 @@
-import React, { Component } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import  { Component } from "react";
 import { Fade } from "react-awesome-reveal";
 
-class About extends Component {
+interface AboutProps {
+  data: any;
+}
+
+class About extends Component<AboutProps> {
   render() {
     if (!this.props.data) return null;
 

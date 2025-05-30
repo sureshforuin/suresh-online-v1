@@ -2,12 +2,19 @@ import React, { Component } from "react";
 import { Fade } from "react-awesome-reveal";
 
 let id = 0;
-class Portfolio extends Component {
+
+interface PortfolioProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: any;
+}
+
+class Portfolio extends Component<PortfolioProps> {
+
   render() {
     if (!this.props.data) return null;
 
     const projects = this.props.data.projects.map(function (projects) {
-      let projectImage = "images/portfolio/" + projects.image;
+      // const projectImage = "images/portfolio/" + projects.image;
 
       return (
         <div key={id++} className="columns portfolio-item">
