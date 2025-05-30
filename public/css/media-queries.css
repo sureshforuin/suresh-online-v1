@@ -17,6 +17,7 @@
       font: 80px/1.1em 'opensans-bold', sans-serif;
       letter-spacing: -1px;
       margin: 0 auto 12px auto;
+      text-transform: uppercase;
    }
 
 }

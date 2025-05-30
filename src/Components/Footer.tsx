@@ -31,11 +31,11 @@ class Footer extends Component<PortfolioProps> {
               <ul className="social-links">{networks}</ul>
 
               <ul className="copyright">
-                <li>&copy; Copyright 2021 Nordic Giant</li>
+                <li>&copy; Copyright 2025 Suresh K</li>
                 <li>
                   Design by{" "}
-                  <a title="Styleshout" href="http://www.styleshout.com/">
-                    Styleshout
+                  <a title="Styleshout" href="hhttps://github.com/sureshforuin/suresh-online-v1">
+                    Suresh K
                   </a>
                 </li>
               </ul>
