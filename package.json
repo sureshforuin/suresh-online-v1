@@ -10,13 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tsparticles/react": "^3.0.0",
     "jquery": "^3.7.1",
-    "particles-bg": "^2.5.5",
     "react": "^19.1.0",
     "react-awesome-reveal": "^4.3.1",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
+    "@tsparticles/react": "^3.0.0",
     "@eslint/js": "^9.26.0",
     "@types/jquery": "^3.5.32",
     "@types/react": "^19.1.0",

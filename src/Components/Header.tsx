@@ -18,8 +18,17 @@ class Header extends Component<HeaderProps> {
 
     return (
       <header id="home">
-        <ParticlesBg type="circle" bg={true} />
-
+        <ParticlesBg
+          type="fountain"
+          bg={{
+            position: "fixed",
+            zIndex: 0,
+            left: 0,
+            top: 0,
+            right: 0,
+            bottom: 0,
+          }}
+        />
         <nav id="nav-wrap">
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
             Show navigation
