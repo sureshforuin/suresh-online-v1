@@ -10,13 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "jquery": "^3.7.1",
+    "particles-bg": "^2.5.5",
     "react": "^19.1.0",
+    "react-awesome-reveal": "^4.3.1",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.26.0",
-    "@types/react": "^19.1.4",
-    "@types/react-dom": "^19.1.4",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
     "@vitejs/plugin-react": "^4.4.1",
     "eslint": "^9.26.0",
     "eslint-plugin-react-hooks": "^5.2.0",
