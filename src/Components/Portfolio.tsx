@@ -23,8 +23,9 @@ class Portfolio extends Component<PortfolioProps> {
             src={projects.url} 
             title={projects.title} 
             frameborder={0}
+            allowfullscreen={true}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            referrerpolicy="strict-origin-when-cross-origin">
             </iframe>
         </div>
 
