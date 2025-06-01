@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import  { Component } from "react";
-import { Fade } from "react-awesome-reveal";
+import {  Slide } from "react-awesome-reveal";
 
 interface AboutProps {
   data: any;
@@ -23,7 +23,7 @@ class About extends Component<AboutProps> {
 
     return (
       <section id="about">
-        <Fade duration={1000}>
+        <Slide direction="up" duration={1000}>
           <div className="row">
             <div className="three columns">
               <img
@@ -63,7 +63,7 @@ class About extends Component<AboutProps> {
               </div>
             </div>
           </div>
-        </Fade>
+        </Slide>
       </section>
     );
   }

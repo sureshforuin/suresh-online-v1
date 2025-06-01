@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Fade, Slide } from "react-awesome-reveal";
+import {  Slide } from "react-awesome-reveal";
 
 interface HeaderProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -20,7 +20,6 @@ class Contact extends Component<HeaderProps> {
 
     return (
       <section id="contact">
-        <Fade duration={1000}>
           <div className="row section-head">
             <div className="two columns header-col">
               <h1>
@@ -32,7 +31,6 @@ class Contact extends Component<HeaderProps> {
               <p className="lead">{message}</p>
             </div>
           </div>
-        </Fade>
 
         <div className="row">
           <Slide duration={1000}>
@@ -121,7 +119,7 @@ class Contact extends Component<HeaderProps> {
                 </p>
               </div>
 
-              <div className="widget widget_tweets">
+              {/* <div className="widget widget_tweets">
                 <h4 className="widget-title">Latest Tweets</h4>
                 <ul id="twitter">
                   <li>
@@ -148,7 +146,7 @@ class Contact extends Component<HeaderProps> {
                     </b>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </aside>
           </Slide>
         </div>

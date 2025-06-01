@@ -17,12 +17,17 @@ class Portfolio extends Component<PortfolioProps> {
     const projects = this.props.data.projects.map( (projects:any) =>{
       // const projectImage = "images/portfolio/" + projects.image;
       return (
-        <div key={id++} className="columns portfolio-item">
-          <div className="item-wrap">
-            {/* <Zmage alt={projects.title} src={projectImage} /> */}
-            <div style={{ textAlign: "center" }}>{projects.title}</div>
-          </div>
+        <div key={id++} className="portfolio-item" style={{marginLeft:20}} >
+          <h5>{projects.title}</h5>
+          <iframe width="560" height="315" 
+            src={projects.url} 
+            title={projects.title} 
+            frameborder={0}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
         </div>
+
       );
     });
 
@@ -32,10 +37,9 @@ class Portfolio extends Component<PortfolioProps> {
           <div className="row">
             <div className="twelve columns collapsed">
               <h1>Check Out Some of My Works.</h1>
-
               <div
                 id="portfolio-wrapper"
-                className="bgrid-quarters s-bgrid-thirds cf"
+                style={{display:"flex",marginLeft:20}}
               >
                 {projects}
               </div>

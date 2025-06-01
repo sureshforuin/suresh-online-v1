@@ -60,6 +60,7 @@ header .banner-text h1 {
    color: #fff;
    letter-spacing: -2px;
    margin: 0 auto 18px auto;
+   text-transform: uppercase;
 }
 header .banner-text h3 {
    font: 18px/1.9em 'librebaskerville-regular', serif;

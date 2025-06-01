@@ -4,7 +4,6 @@ import { Fade } from "react-awesome-reveal";
 
 
 interface PortfolioProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data: any;
 }
 

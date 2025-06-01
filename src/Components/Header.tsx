@@ -11,14 +11,11 @@ class Header extends Component<HeaderProps> {
   render() {
     if (!this.props.data) return null;
 
-    const {project, github, name, description} = this.props.data;
+    const {youtube, github, name, description} = this.props.data;
 
     return (
       <header id="home">
-        <ParticlesBg
-          type="lines"
-          bg={true}
-        />
+        <ParticlesBg type="fountain" bg={true} />
         <nav id="nav-wrap">
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
             Show navigation
@@ -42,13 +39,13 @@ class Header extends Component<HeaderProps> {
 
             <li>
               <a className="smoothscroll" href="#resume">
-                Resume
+                Journey
               </a>
             </li>
 
             <li>
               <a className="smoothscroll" href="#portfolio">
-                Works
+                Videos
               </a>
             </li>
 
@@ -62,19 +59,39 @@ class Header extends Component<HeaderProps> {
 
         <div className="row banner">
           <div className="banner-text">
-            <Fade>
+            <Fade
+              delay={200} // Wait before starting
+              duration={1000} // Animation duration
+              fraction={0.5} // Trigger when 50% visible
+              triggerOnce // Animate only once
+            >
               <h1 className="responsive-headline">{name}</h1>
             </Fade>
-            <Fade duration={1200}>
+            <Fade
+              delay={200} // Wait before starting
+              duration={1200} // Animation duration
+              fraction={0.5} // Trigger when 50% visible
+              triggerOnce // Animate only once
+            >
               <h3>{description}.</h3>
             </Fade>
             <hr />
-            <Fade duration={2000}>
+            <Fade
+              delay={200} // Wait before starting
+              duration={1500} // Animation duration
+              fraction={0.5} // Trigger when 50% visible
+              triggerOnce // Animate only once
+            >
               <ul className="social">
-                <a href={project} className="button btn project-btn">
-                  <i className="fa fa-book"></i>Project
+                <a
+                  href={youtube}
+                  target="_blank"
+                  className="button btn project-btn">
+                  <i className="fa fa-youtube"></i>Youtube
                 </a>
-                <a href={github} className="button btn github-btn">
+                <a href={github} 
+                  target="_blank"
+                className="button btn github-btn">
                   <i className="fa fa-github"></i>Github
                 </a>
               </ul>

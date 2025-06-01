@@ -3,7 +3,6 @@ import  { Component } from "react";
 import { Slide } from "react-awesome-reveal";
 
 interface ResumeProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data: any;
 }
 
@@ -26,8 +25,9 @@ class Resume extends Component<ResumeProps> {
         <div key={education.school}>
           <h3>{education.school}</h3>
           <p className="info">
-            {education.degree} <span>&bull;</span>
-            <em className="date">{education.graduated}</em>
+            {education.degree} 
+            {/* <span>&bull;</span> */}
+            {/* <em className="date">{education.graduated}</em> */}
           </p>
           <p>{education.description}</p>
         </div>
@@ -62,7 +62,7 @@ class Resume extends Component<ResumeProps> {
 
     return (
       <section id="resume">
-        <Slide duration={1300}>
+        <Slide duration={1300} >
           <div className="row education">
             <div className="three columns header-col">
               <h1>
@@ -90,7 +90,7 @@ class Resume extends Component<ResumeProps> {
           </div>
         </Slide>
 
-        <Slide  duration={1300}>
+        <Slide direction="up"  duration={1300}>
           <div className="row skill">
             <div className="three columns header-col">
               <h1>
