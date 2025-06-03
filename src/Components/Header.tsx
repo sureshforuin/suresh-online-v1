@@ -45,7 +45,7 @@ class Header extends Component<HeaderProps> {
 
             <li>
               <a className="smoothscroll" href="#portfolio">
-                Videos
+                Art works
               </a>
             </li>
 
@@ -89,9 +89,10 @@ class Header extends Component<HeaderProps> {
                   className="button btn project-btn">
                   <i className="fa fa-youtube"></i>Youtube
                 </a>
-                <a href={github} 
+                <a
+                  href={github}
                   target="_blank"
-                className="button btn github-btn">
+                  className="button btn github-btn">
                   <i className="fa fa-github"></i>Github
                 </a>
               </ul>
