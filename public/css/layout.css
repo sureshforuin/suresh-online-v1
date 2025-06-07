@@ -1023,3 +1023,12 @@ footer .social-links li:first-child { margin-left: 0; }
 .github-btn{
    background-color: #34495e !important;
 }
+
+.foo{
+   margin: auto;
+    max-width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+.foo img{ margin: 10px; }
