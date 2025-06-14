@@ -236,6 +236,7 @@ ul#nav li.current a { color: #fe6928; }
    padding-top: 90px;
    padding-bottom: 72px;
    overflow: hidden;
+   position: relative;
 }
 
 #resume a, #resume a:visited  { color: #0762f9; }
@@ -416,6 +417,7 @@ ul#nav li.current a { color: #fe6928; }
    background: #ebeeee;
    padding-top: 90px;
    padding-bottom: 60px;
+   position: relative;
 }
 #portfolio h1 {
    font: 15px/24px 'opensans-semibold', sans-serif;
@@ -759,7 +761,7 @@ call-to-action .button {
     margin: 0 6px;
     display: inline-block;
     zoom: 1;
-    *display: inline;
+    *display:inline;
 }
 .flex-control-paging li a {
     width: 12px;
@@ -794,6 +796,7 @@ call-to-action .button {
    padding-top: 96px;
    padding-bottom: 102px;
    color: #636363;
+   position: relative;
 }
 #contact .section-head { margin-bottom: 42px; }
 
