@@ -14,7 +14,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import About from "./Components/About";
 import Resume from "./Components/Resume";
-// import Contact from "./Components/Contact";
+import Contact from "./Components/Contact";
 import Portfolio from "./Components/Portfolio";
 
 interface AppsProps {
@@ -594,7 +594,7 @@ const [resumeData, setResumeData] = useState<any>(null);
             <Header data={resumeData.main} />
             <About data={resumeData.main} />
             <Resume data={resumeData.resume} />
-            {/* <Contact data={resumeData.main} /> */}
+            <Contact data={resumeData.main} />
             <Portfolio data={resumeData.portfolio} />
             <Footer data={resumeData.main} />
           </>
