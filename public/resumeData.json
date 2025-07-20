@@ -62,10 +62,16 @@
       }
     ],
     "work":[
+            {
+        "company":"Citicorp Services India Private Limited",
+        "title":"Vice President ",
+        "years":"July 2025 - Present",
+        "description":"React | Figma | UX/UI Lead | AI Enthusiast "
+      },
       {
         "company":"Citicorp Services India Private Limited",
         "title":"Assistant Vice President ",
-        "years":"March 2018 - Present",
+        "years":"March 2018 - July 2025",
         "description":"Figma, React, Mongo, Node, Express, Git, HTML, CSS, Bootstrap, Webpack "
       },
       {
@@ -79,12 +85,6 @@
         "title":"Team Lead - UI",
         "years":"Dec 2013 - Jul 2017 ",
         "description":"JS, React, Angular, HTML, CSS"
-      }, 
-       {
-        "company":"Infrasoft Technologies Ltd",
-        "title":"Consultant",
-        "years":"May 2012 - Dec 2013 ",
-        "description":"JS, HTML, CSS, Photoshop, Flash"
       }
     ],
     "skills":[
